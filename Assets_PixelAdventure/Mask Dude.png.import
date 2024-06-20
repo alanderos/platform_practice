@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bei7x67psb4c4"
-path="res://.godot/imported/Mask Dude.png-e66ab4bf807d1719e496ce0424c7bdd6.ctex"
+path="res://.godot/imported/Mask Dude.png-70b3633e7bb8b93eb0ba0d0740b805b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets_PixelAdventure/Main Characters/Mask Dude.png"
-dest_files=["res://.godot/imported/Mask Dude.png-e66ab4bf807d1719e496ce0424c7bdd6.ctex"]
+source_file="res://Assets_PixelAdventure/Mask Dude.png"
+dest_files=["res://.godot/imported/Mask Dude.png-70b3633e7bb8b93eb0ba0d0740b805b3.ctex"]
 
 [params]
 

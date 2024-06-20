@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bw1qb2bmoptx7"]
+[gd_scene load_steps=11 format=3 uid="uid://bw1qb2bmoptx7"]
 
 [ext_resource type="Script" path="res://Nodes/characters/player.gd" id="1_262u8"]
-[ext_resource type="Texture2D" uid="uid://bei7x67psb4c4" path="res://Assets_PixelAdventure/Main Characters/Mask Dude.png" id="1_tcgw1"]
+[ext_resource type="Texture2D" uid="uid://bei7x67psb4c4" path="res://Assets_PixelAdventure/Mask Dude.png" id="2_e874i"]
+[ext_resource type="Script" path="res://Nodes/characters/Camera2D.gd" id="3_b34cf"]
 
 [sub_resource type="Animation" id="Animation_4ncw8"]
 length = 0.001
@@ -100,7 +101,7 @@ size = Vector2(20.5, 22)
 script = ExtResource("1_262u8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_tcgw1")
+texture = ExtResource("2_e874i")
 hframes = 11
 vframes = 4
 
@@ -112,3 +113,6 @@ libraries = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_vykyg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("3_b34cf")
