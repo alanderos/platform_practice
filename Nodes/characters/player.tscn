@@ -116,6 +116,7 @@ position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_vykyg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
 script = ExtResource("3_b34cf")
 
 [node name="PlayerGUI" type="CanvasLayer" parent="."]

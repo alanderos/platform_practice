@@ -31,17 +31,43 @@ func _physics_process(delta):
 	if is_on_floor(): 
 		cJump = 0;
 	if Input.is_action_just_pressed("ui_accept") and cJump < jumps:
-		if cJump == 0:
-			velocity.y -= jump
-		else:
-			velocity.y -= jump*0.7
-		cJump+=1
+		jumping()
 		
 	if !is_on_floor():
 		velocity.y += gravity
 		anim.play("jump");
+	wallJumping()
 	
 	move_and_slide()
+	
+func jumping():
+	if cJump == 0:
+			velocity.y -= jump
+	else:
+		velocity.y -= jump*0.7
+	cJump+=1
+	
 
+
+func wallSlide():
+	if is_on_wall() and Input.is_action_pressed("ui_accept") and not is_on_floor() and not Input.is_action_just_pressed("ui_accept"):
+		velocity.y = gravity * .9
+		
+	
+func wallJumping():
+	if not is_on_wall(): return
+	
+	var wall_normal = get_wall_normal()
+	print("normal: ",wall_normal)
+	print("Vector2 ",Vector2.LEFT)
+	if Input.is_action_pressed("ui_right") and Input.is_action_just_pressed("ui_accept") and Vector2.LEFT == wall_normal:
+		velocity.x = -wall_normal.x * speed
+		velocity.y = -jump
+		print("jump left")
+	if Input.is_action_pressed("ui_left") and Input.is_action_just_pressed("ui_accept") and Vector2.RIGHT == wall_normal:
+		velocity.x = -wall_normal.x * speed
+		velocity.y = -jump
+		print("jump right")
+	#else: wallSlide()
 func actualizaInterfazFrutas():
 	frutas_label.text = str(Global.frutas)

@@ -51,12 +51,13 @@ script = ExtResource("1_rclgh")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_s8qxl")
 hframes = 17
-frame = 7
+frame = 16
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_b1geh")
 }
+autoplay = "fresa"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2oytu")
